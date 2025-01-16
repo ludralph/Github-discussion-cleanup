@@ -16,7 +16,7 @@ A GitHub Personal Access Token (PAT) with the necessary permissions to access di
 
 1. Clone this repository to your local machine.
 ```
-git clone 
+git clone https://github.com/ludralph/Github-discussion-cleanup
 ```
 
 2. Navigate to the project directory.
