@@ -55,6 +55,7 @@ const fetchDiscussions = async (after: string | null = null) => {
   };
 
   const response = await graphqlWithAuth(query, variables);
+  
   return response.repository.discussions;
 };
 
@@ -132,8 +133,9 @@ const processDiscussions = async () => {
       if (
         isUnanswered &&
         isQA &&
-        createdAt >= new Date("2020-01-01") &&
-        createdAt <= new Date("2020-12-31")
+        createdAt >= new Date("2020-01-01T00:00:00Z") && 
+        createdAt <= new Date("2020-12-31T23:59:59Z")
+
       ) {
         console.log(`Adding closing comment to discussion: ${node.title} (${node.url})`);
         await  addDiscussionComment(node.id, closingMessage); // Add a closing comment
