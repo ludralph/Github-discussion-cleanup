@@ -8,7 +8,6 @@ For more details about our priorities and vision for the future of Prisma ORM, c
 
 Thank you for your understanding and being part of the community!`;
 
-
 export const answeredClosingMessage = `Hi there,
 
 To keep our discussions organized and focused on the most relevant topics, we’re reviewing and tidying up our backlog. As part of this process, we’re closing discussions that have already been marked as answered but remain open.

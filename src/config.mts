@@ -1,10 +1,5 @@
-import { graphql } from '@octokit/graphql';
-import 'dotenv/config';
-
-const token = process.env.GITHUB_TOKEN;
-
-export const graphqlWithAuth = graphql.defaults({
-  headers: {
-    authorization: `token ${token}`,
-  },
-});
+export const MUTATION_DELAY = 5000; // Delay between mutation requests (ms)
+export const REQUEST_DELAY = 2000; // Delay between any two API requests (ms)
+export const CONCURRENCY_LIMIT = 2; // Max concurrent requests
+export const MAX_RETRIES = 5; // Max retries for failed requests
+export const RETRY_DELAY = 10000; // Delay for retries after hitting rate limits
